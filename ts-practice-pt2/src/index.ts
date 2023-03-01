@@ -167,12 +167,16 @@ const deletePhoneByIndex = (array: Warehouse[], index: number): void => {
   }
 };
 
+// console.log(deletePhoneByIndex(chicagoWarehouse, 0))
+// console.log(chicagoWarehouse)
+
+
 const deletePhoneByName = (array: Warehouse[], name: string): Warehouse[] => {
   return array.filter((obj) => {
     return obj.name !== name;
   });
 };
-//console.log(deletePhoneByName(chicagoWarehouse, 'Pixel 5'))
+//console.log(deletePhoneByName(chicagoWarehouse, 'Pixel 51'))
 
 const filter5G = (array: Warehouse[], isFiveG: boolean): Warehouse[] => {
   return array.filter((obj) => {
@@ -191,7 +195,7 @@ const filterPriceLessThan = (
   });
 };
 
-// console.log(filterPriceLessThan(chicagoWarehouse, 999))
+ //console.log(filterPriceLessThan(chicagoWarehouse, 5))
 
 const filterPriceGreaterThan = (
   array: Warehouse[],
@@ -202,9 +206,9 @@ const filterPriceGreaterThan = (
   });
 };
 
-//console.log(filterPriceGreaterThan(chicagoWarehouse, 998.5))
+//console.log(filterPriceGreaterThan(chicagoWarehouse, 2000))
 
-const findPhoneByName = (array: Warehouse[], name: string): Warehouse => {
+const findPhoneByName = (array: Warehouse[], name: string): Warehouse | undefined => {
   let foundArray = array.filter((obj) => {
     return obj.name === name;
   });
@@ -212,7 +216,7 @@ const findPhoneByName = (array: Warehouse[], name: string): Warehouse => {
   return foundArray[0];
 };
 
-//console.log(findPhoneByName(chicagoWarehouse, "iPhone 12 Max"));
+//console.log(findPhoneByName(chicagoWarehouse, "iPhone 12 Max1"));
 
 const calcAverageCost = (array: Warehouse[]): number => {
   let sum: number = 0;
